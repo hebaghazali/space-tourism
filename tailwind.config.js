@@ -20,7 +20,7 @@ module.exports = {
         black: '#0B0D17',
       },
       boxShadow: {
-        w: '1px 1px 0 88px rgba(255, 255, 255, 0.1)',
+        w: '0 0 0 88px rgba(255, 255, 255, 0.1)',
       },
     },
   },
