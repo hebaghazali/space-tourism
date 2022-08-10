@@ -1,8 +1,15 @@
+import { useRouter } from 'next/router';
 import Navbar from './Navbar';
 
 const Layout = ({ children }) => {
+  const { pathname } = useRouter();
+
+  const param = pathname === '/' ? 'home' : pathname.slice(1);
+
   return (
-    <div className='bg-home bg-no-repeat bg-cover bg-[#0B0D17] w-screen h-screen pt-[2.5rem]'>
+    <div
+      className={`bg-${param} bg-no-repeat bg-cover bg-[#0B0D17] w-screen h-screen pt-[2.5rem]`}
+    >
       <Navbar />
       {children}
     </div>

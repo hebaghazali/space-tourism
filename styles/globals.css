@@ -36,3 +36,16 @@ button {
 .nav-item:hover:not(.active) {
   border-bottom: 3px solid #ffffff80;
 }
+
+.bg-home {
+  background-image: url('/assets/home/background-home-desktop.jpg');
+}
+.bg-destination {
+  background-image: url('/assets/destination/background-destination-desktop.jpg');
+}
+.bg-crew {
+  background-image: url('/assets/crew/background-crew-desktop.jpg');
+}
+.bg-technology {
+  background-image: url('/assets/technology/background-technology-desktop.jpg');
+}

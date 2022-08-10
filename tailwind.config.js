@@ -10,11 +10,6 @@ module.exports = {
         'barlow-condensed': ['Barlow Condensed', 'sans-serif'],
         bellefair: ['Bellefair', 'serif'],
       },
-      backgroundImage: {
-        home: "url('/assets/home/background-home-desktop.jpg')",
-        destination:
-          "url('/assets/destination/background-destination-desktop.jpg')",
-      },
       borderWidth: {
         3: '3px',
       },
