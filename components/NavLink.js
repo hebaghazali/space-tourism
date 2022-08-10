@@ -1,10 +1,19 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 
 const NavLink = ({ children, href, exact }) => {
   const { pathname } = useRouter();
-  const isActive = exact ? pathname === href : pathname.startsWith(href);
+
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    setIsActive(exact ? pathname === href : pathname.startsWith(href));
+    return () => {
+      setIsActive(false);
+    };
+  }, [exact, pathname, href]);
 
   return (
     <li>
