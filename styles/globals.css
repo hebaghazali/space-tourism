@@ -24,3 +24,15 @@ button {
   padding: 0;
   margin: 0;
 }
+
+.nav-item {
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item.active {
+  border-bottom: 3px solid #fff;
+}
+
+.nav-item:hover:not(.active) {
+  border-bottom: 3px solid #ffffff80;
+}

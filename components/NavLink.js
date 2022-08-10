@@ -3,25 +3,26 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-const NavLink = ({ children, href, exact }) => {
+const NavLink = ({ children, href }) => {
   const { pathname } = useRouter();
 
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    setIsActive(exact ? pathname === href : pathname.startsWith(href));
-    return () => {
-      setIsActive(false);
-    };
-  }, [exact, pathname, href]);
+    console.log(href);
+    console.log(pathname);
+    console.log(pathname === href);
+    console.log('----');
+    setIsActive(pathname === href);
+  }, [pathname, href]);
 
   return (
     <li>
       <Link href={href}>
         <a
-          className={`h-full flex items-center border-b-3 border-b-${
-            isActive ? 'white' : 'transparent'
-          } ${!isActive && 'hover:border-b-[#FFFFFF80]'} tracking-[2.7px]`}
+          className={`nav-item h-full flex items-center tracking-[2.7px] ${
+            isActive && 'active'
+          }`}
         >
           {children}
         </a>

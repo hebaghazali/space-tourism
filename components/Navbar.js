@@ -32,7 +32,7 @@ const Navbar = () => {
           ['Technology', '/technology'],
         ].map(([title, pathname], idx) => {
           return (
-            <NavLink key={idx} href={pathname} exact={pathname === '/'}>
+            <NavLink key={idx} href={pathname}>
               <span className='font-bold pr-2'>0{idx}</span> {title}
             </NavLink>
           );
