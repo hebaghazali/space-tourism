@@ -25,7 +25,7 @@ export default function Home() {
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
-        {/* absolute right-[165px] bottom-[131px] */}
+
         <button className='rounded-full bg-white text-black font-bellefair uppercase w-[17.125rem] h-[17.125rem] text-[2rem] leading-8 tracking-[2px] hover:shadow-w transition-shadow duration-200 ease-linear'>
           Explore
         </button>
