@@ -38,7 +38,7 @@ const Destination = props => {
 
       <Heading idx='01'>pick your destination</Heading>
 
-      <div className='mt-[8.125rem] translate-x-16 animate-spin-slow'>
+      <div className='mt-[8.125rem] translate-x-16'>
         <Image
           src={selectedPlanet?.images?.webp || '/assets/not_found.png'}
           alt='Planet'
