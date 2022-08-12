@@ -20,17 +20,13 @@ const Destination = props => {
     } else {
       setDestinationsObject(destinations);
     }
-  }, []);
+  }, [destinations, dispatch, props.destinations]);
 
   useEffect(() => {
     console.log(destinationsObject);
 
     setSelectedPlanet(destinationsObject[0]);
   }, [destinationsObject]);
-
-  useEffect(() => {
-    // selectedPlanet?.images?.webp && console.log(selectedPlanet?.images?.webp);
-  }, [selectedPlanet]);
 
   return (
     <>
@@ -42,7 +38,7 @@ const Destination = props => {
 
       <Heading idx='01'>pick your destination</Heading>
 
-      <div className='mt-[8.125rem] translate-x-16'>
+      <div className='mt-[8.125rem] translate-x-16 animate-spin-slow'>
         <Image
           src={selectedPlanet?.images?.webp || '/assets/not_found.png'}
           alt='Planet'
