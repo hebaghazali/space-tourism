@@ -80,16 +80,18 @@ const Destination = props => {
           {selectedPlanet?.description}
         </p>
 
-        <div className='flex gap-[5rem] uppercase text-[#D0D6F9] leading-[1.75rem] border-t border-t-[#383B4B] pt-7'>
-          <div className=''>
-            <p>avg. distance</p>
-            <h2 className='text-white font-bellefair'>
+        <div className='flex gap-[5rem] uppercase text-[#D0D6F9] leading-[1.75rem] border-t border-t-[#383B4B] pt-7 text-[0.875rem]'>
+          <div>
+            <p className='leading-[1rem] tracking-[2.3625px] '>avg. distance</p>
+            <h2 className='text-white text-[1.75rem] font-bellefair pt-[12px] leading-[2rem]'>
               {selectedPlanet?.distance}
             </h2>
           </div>
           <div>
-            <p>est. travel time</p>
-            <h2 className='text-white font-bellefair'>
+            <p className='leading-[1rem] tracking-[2.3625px] '>
+              est. travel time
+            </p>
+            <h2 className='text-white text-[1.75rem] font-bellefair pt-[12px] leading-[2rem]'>
               {selectedPlanet?.travel}
             </h2>
           </div>
