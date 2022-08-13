@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
 
   return (
     <div
-      className={`bg-${param} bg-fixed bg-no-repeat bg-cover bg-[#0B0D17] w-screen min-h-screen pt-[2.5rem]`}
+      className={`bg-${param} bg-fixed bg-no-repeat bg-cover bg-black w-screen min-h-screen pt-[2.5rem]`}
     >
       <Navbar />
       {children}

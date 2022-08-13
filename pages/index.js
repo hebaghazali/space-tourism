@@ -13,7 +13,7 @@ export default function Home({ destinations, crew, technology }) {
     dispatch(setDestinations(destinations));
     dispatch(setCrew(crew));
     dispatch(setTechnology(technology));
-  }, []);
+  }, [crew, destinations, dispatch, technology]);
 
   return (
     <>
@@ -23,9 +23,9 @@ export default function Home({ destinations, crew, technology }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <p className='font-barlow-condensed text-[#D0D6F9] leading-[32px] w-[444px] text-lg self-end'>
+      <p className='font-barlow-condensed text-gray leading-[32px] w-[27.75rem] text-lg self-end'>
         <span className='tracking-[4.725px] leading-[34px] uppercase text-[1.75rem]'>
-          So, you want to travel to{' '}
+          So, you want to travel to
         </span>
         <span className='block font-bellefair text-white text-[9.375rem] uppercase leading-[172px]'>
           Space

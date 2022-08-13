@@ -35,7 +35,7 @@ button {
 }
 
 .nav-item:hover:not(.active) {
-  border-bottom: 3px solid #ffffff80;
+  border-bottom: 3px solid #979797;
 }
 
 .bg-home {
