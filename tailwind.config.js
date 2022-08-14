@@ -31,6 +31,7 @@ module.exports = {
       },
       spacing: {
         'box-width': '27.75rem',
+        inherit: 'inherit',
       },
       letterSpacing: {
         tight: '2px',
@@ -47,6 +48,9 @@ module.exports = {
       },
       boxShadow: {
         w: '0 0 0 88px rgba(255, 255, 255, 0.1)',
+      },
+      opacity: {
+        17: '.17',
       },
     },
   },

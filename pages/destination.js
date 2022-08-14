@@ -27,7 +27,7 @@ const Destination = props => {
         <Heading5 className='text-white'>pick your destination</Heading5>
       </Heading>
 
-      <div className='mt-[8.125rem] translate-x-16'>
+      <div className='mt-[8.125rem] mb-[7rem] translate-x-16'>
         <Image
           src={
             destinations[selectedPlanet]?.images?.webp ||
@@ -39,7 +39,7 @@ const Destination = props => {
         />
       </div>
 
-      <div className='mt-[6.125rem] font-barlow-condensed w-box-width'>
+      <div className='mt-[6.125rem] font-barlow-condensed w-box-width mb-[7rem]'>
         <Tabs
           destinations={destinations}
           selectedPlanet={selectedPlanet}
@@ -48,7 +48,9 @@ const Destination = props => {
 
         <Heading2>{destinations[selectedPlanet]?.name}</Heading2>
 
-        <BodyText>{destinations[selectedPlanet]?.description}</BodyText>
+        <div className='pt-[1rem]'>
+          <BodyText>{destinations[selectedPlanet]?.description}</BodyText>
+        </div>
 
         <div className='flex gap-[5rem] uppercase leading-3 border-t border-t-[#383B4B] pt-7 mt-[3.375rem]'>
           <div className='flex flex-col gap-3'>
