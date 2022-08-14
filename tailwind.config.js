@@ -39,6 +39,7 @@ module.exports = {
         wider: '4.725px',
       },
       borderWidth: {
+        1: '1px',
         3: '3px',
       },
       colors: {

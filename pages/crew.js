@@ -18,8 +18,6 @@ const Crew = props => {
 
   useEffect(() => {
     crew.length === 0 && dispatch(setCrew(props.crew));
-
-    console.log(crew);
   }, [crew, dispatch, props.crew]);
 
   return (
@@ -35,7 +33,7 @@ const Crew = props => {
           <Heading3>{crew[selectedPerson]?.name}</Heading3>
         </div>
 
-        <div className='w-box-width h-[10rem] mt-[1.6875rem]'>
+        <div className='h-[10rem] mt-[1.6875rem]'>
           <BodyText>{crew[selectedPerson]?.bio}</BodyText>
         </div>
 

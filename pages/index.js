@@ -19,18 +19,22 @@ export default function Home({ destinations, crew, technology }) {
 
   return (
     <>
-      <div className='w-box-width'>
-        <Heading5>So, you want to travel to</Heading5>
-        <Heading1>Space</Heading1>
-        <BodyText>
-          {`Let's face it; if you want to go to space, you might as well genuinely
+      <div className='mb-[8.1875rem]'>
+        <div>
+          <Heading5>So, you want to travel to</Heading5>
+          <Heading1>Space</Heading1>
+          <BodyText>
+            {`Let's face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we'll give you a truly out of this world
           experience!`}
-        </BodyText>
+          </BodyText>
+        </div>
       </div>
 
-      <MainButton>Explore</MainButton>
+      <div className='mb-[8.1875rem]'>
+        <MainButton>Explore</MainButton>
+      </div>
     </>
   );
 }
