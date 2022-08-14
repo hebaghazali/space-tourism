@@ -1,10 +1,15 @@
-import Head from 'next/head';
-import Heading from './../components/Heading';
+import Subheading1 from '../components/Typography/Headings/Subheading1';
+import Subheading2 from '../components/Typography/Headings/Subheading2';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { setDestinations } from '../store/spaceSlice';
 import getData from './api/staticdata';
 import Image from 'next/image';
+import BodyText from '../components/Typography/BodyText';
+import Heading from '../components/Typography/Heading';
+import Heading2 from '../components/Typography/Headings/Heading2';
+import Heading5 from '../components/Typography/Headings/Heading5';
+import Tabs from './../components/Tabs';
 
 const Destination = props => {
   const { destinations } = useSelector(state => state.space);
@@ -18,13 +23,9 @@ const Destination = props => {
 
   return (
     <>
-      <Head>
-        <title>Space Tourism | Destination</title>
-        <meta name='description' content='Space Tourism Destination' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <Heading idx='01'>pick your destination</Heading>
+      <Heading idx='01'>
+        <Heading5 className='text-white'>pick your destination</Heading5>
+      </Heading>
 
       <div className='mt-[8.125rem] translate-x-16'>
         <Image
@@ -39,48 +40,24 @@ const Destination = props => {
       </div>
 
       <div className='mt-[6.125rem] font-barlow-condensed w-[27.75rem]'>
-        <ul className='flex gap-6 uppercase pb-[2.3125rem] tracking-[2.7px] leading-[1.1875rem]'>
-          {destinations.map(planet => (
-            <li
-              key={planet.name}
-              className={`cursor-pointer pb-3 border-b-[#979797] hover:border-b-3 ${
-                destinations[selectedPlanet]?.name === planet.name
-                  ? 'text-[#FFFFFF] border-b-3 border-b-white'
-                  : 'text-gray'
-              }`}
-              onClick={e => {
-                destinations.forEach((p, idx) => {
-                  p.name === e.target.innerHTML && setSelectedPlanet(idx);
-                });
-              }}
-            >
-              {planet.name}
-            </li>
-          ))}
-        </ul>
+        <Tabs
+          destinations={destinations}
+          selectedPlanet={selectedPlanet}
+          setSelectedPlanet={setSelectedPlanet}
+        />
 
-        <h1 className='text-[6.25rem] font-bellefair uppercase leading-[7.1875rem]'>
-          {destinations[selectedPlanet]?.name}
-        </h1>
+        <Heading2>{destinations[selectedPlanet]?.name}</Heading2>
 
-        <p className='text-gray text-lg pb-[3.375rem] pt-[1rem] font-barlow leading-[2rem]'>
-          {destinations[selectedPlanet]?.description}
-        </p>
+        <BodyText>{destinations[selectedPlanet]?.description}</BodyText>
 
-        <div className='flex gap-[5rem] uppercase text-gray leading-[1.75rem] border-t border-t-[#383B4B] pt-7 text-[0.875rem]'>
-          <div>
-            <p className='leading-[1rem] tracking-[2.3625px] '>avg. distance</p>
-            <h2 className='text-white text-[1.75rem] font-bellefair pt-[12px] leading-[2rem]'>
-              {destinations[selectedPlanet]?.distance}
-            </h2>
+        <div className='flex gap-[5rem] uppercase leading-[1.75rem] border-t border-t-[#383B4B] pt-7 mt-[3.375rem]'>
+          <div className='flex flex-col gap-3'>
+            <Subheading2>avg. distance</Subheading2>
+            <Subheading1>{destinations[selectedPlanet]?.distance}</Subheading1>
           </div>
-          <div>
-            <p className='leading-[1rem] tracking-[2.3625px] '>
-              est. travel time
-            </p>
-            <h2 className='text-white text-[1.75rem] font-bellefair pt-[12px] leading-[2rem]'>
-              {destinations[selectedPlanet]?.travel}
-            </h2>
+          <div className='flex flex-col gap-3'>
+            <Subheading2>est. travel time</Subheading2>
+            <Subheading1>{destinations[selectedPlanet]?.travel}</Subheading1>
           </div>
         </div>
       </div>

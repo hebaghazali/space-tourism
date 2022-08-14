@@ -1,10 +1,12 @@
-import Head from 'next/head';
-
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { setCrew, setDestinations, setTechnology } from '../store/spaceSlice';
 import getData from './api/staticdata';
+import BodyText from '../components/Typography/BodyText';
+import Heading1 from '../components/Typography/Headings/Heading1';
+import Heading5 from '../components/Typography/Headings/Heading5';
+import MainButton from './../components/MainButton';
 
 export default function Home({ destinations, crew, technology }) {
   const dispatch = useDispatch();
@@ -17,28 +19,18 @@ export default function Home({ destinations, crew, technology }) {
 
   return (
     <>
-      <Head>
-        <title>Space Tourism | Home</title>
-        <meta name='description' content='Space Tourism Home' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <div className='w-[27.75rem] self-end'>
+        <Heading5>So, you want to travel to</Heading5>
+        <Heading1>Space</Heading1>
+        <BodyText>
+          {`Let's face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we'll give you a truly out of this world
+          experience!`}
+        </BodyText>
+      </div>
 
-      <p className='font-barlow-condensed text-gray leading-[32px] w-[27.75rem] text-lg self-end'>
-        <span className='tracking-[4.725px] leading-[34px] uppercase text-[1.75rem]'>
-          So, you want to travel to
-        </span>
-        <span className='block font-bellefair text-white text-[9.375rem] uppercase leading-[172px]'>
-          Space
-        </span>
-        Let’s face it; if you want to go to space, you might as well genuinely
-        go to outer space and not hover kind of on the edge of it. Well sit
-        back, and relax because we’ll give you a truly out of this world
-        experience!
-      </p>
-
-      <button className='rounded-full bg-white text-black font-bellefair uppercase w-[17.125rem] h-[17.125rem] text-[2rem] leading-8 tracking-[2px] hover:shadow-w transition-shadow duration-200 ease-linear self-end'>
-        Explore
-      </button>
+      <MainButton>Explore</MainButton>
     </>
   );
 }

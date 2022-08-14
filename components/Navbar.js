@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import logo from '/public/assets/shared/logo.svg';
 import NavLink from './NavLink';
+import NavText from './Typography/NavText';
 
 const Navbar = () => {
   return (
@@ -33,7 +34,9 @@ const Navbar = () => {
         ].map(([title, pathname], idx) => {
           return (
             <NavLink key={idx} href={pathname}>
-              <span className='font-bold pr-2'>0{idx}</span> {title}
+              <NavText>
+                <span className='font-bold'>0{idx}</span> {title}
+              </NavText>
             </NavLink>
           );
         })}

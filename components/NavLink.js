@@ -16,7 +16,7 @@ const NavLink = ({ children, href }) => {
     <li>
       <Link href={href}>
         <a
-          className={`nav-item h-full flex items-center tracking-[2.7px]${
+          className={`nav-item h-full flex items-center${
             isActive ? ' active' : ''
           }`}
         >
