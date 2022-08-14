@@ -39,7 +39,7 @@ const Destination = props => {
         />
       </div>
 
-      <div className='mt-[6.125rem] font-barlow-condensed w-[27.75rem]'>
+      <div className='mt-[6.125rem] font-barlow-condensed w-box-width'>
         <Tabs
           destinations={destinations}
           selectedPlanet={selectedPlanet}
@@ -50,7 +50,7 @@ const Destination = props => {
 
         <BodyText>{destinations[selectedPlanet]?.description}</BodyText>
 
-        <div className='flex gap-[5rem] uppercase leading-[1.75rem] border-t border-t-[#383B4B] pt-7 mt-[3.375rem]'>
+        <div className='flex gap-[5rem] uppercase leading-3 border-t border-t-[#383B4B] pt-7 mt-[3.375rem]'>
           <div className='flex flex-col gap-3'>
             <Subheading2>avg. distance</Subheading2>
             <Subheading1>{destinations[selectedPlanet]?.distance}</Subheading1>

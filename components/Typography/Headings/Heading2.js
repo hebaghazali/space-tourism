@@ -1,8 +1,6 @@
 const Heading2 = ({ children }) => {
   return (
-    <h2 className='text-[6.25rem] font-bellefair uppercase leading-[7.1875rem]'>
-      {children}
-    </h2>
+    <h2 className='font-bellefair uppercase text-8xl leading-9'>{children}</h2>
   );
 };
 

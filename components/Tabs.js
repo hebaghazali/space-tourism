@@ -8,7 +8,7 @@ const Tabs = ({ destinations, selectedPlanet, setSelectedPlanet }) => {
   };
 
   return (
-    <ul className='flex gap-6 uppercase pb-[2.3125rem] tracking-[2.7px] leading-[1.1875rem]'>
+    <ul className='flex gap-6 uppercase pb-[2.3125rem] tracking-wide leading-2'>
       {destinations.map(planet => (
         <Tab
           key={planet.name}

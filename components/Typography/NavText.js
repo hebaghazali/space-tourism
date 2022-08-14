@@ -1,6 +1,6 @@
 const NavText = ({ children }) => {
   return (
-    <p className='font-barlow-condensed leading-[1.1875rem] tracking-[2.7px] inline'>
+    <p className='font-barlow-condensed leading-2 tracking-wide inline'>
       {children}
     </p>
   );

@@ -3,7 +3,7 @@ const Heading5 = ({ children, className }) => {
     <h5
       className={`font-barlow-condensed  ${
         className || 'text-gray'
-      } text-[1.75rem] leading-[2.125rem] tracking-[4.725px] uppercase`}
+      } text-3xl leading-6 tracking-wider uppercase`}
     >
       {children}
     </h5>
