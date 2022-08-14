@@ -2,9 +2,9 @@ import Tab from './Tab';
 
 const Tabs = ({ destinations, selectedPlanet, setSelectedPlanet }) => {
   const selectPlanet = e => {
-    destinations.forEach((p, idx) => {
-      p.name === e.target.innerHTML && setSelectedPlanet(idx);
-    });
+    setSelectedPlanet(
+      destinations.findIndex(planet => planet.name === e.target.innerHTML)
+    );
   };
 
   return (
