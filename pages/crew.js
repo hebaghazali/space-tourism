@@ -28,7 +28,7 @@ const Crew = props => {
         <Subheading1>meet your crew</Subheading1>
       </Heading>
 
-      <div className='self-center min-w-[38.375rem] flex flex-col'>
+      <div className='self-end min-w-[38.375rem] pb-[5.875rem] flex flex-col'>
         <Heading4>{crew[selectedPerson]?.role}</Heading4>
 
         <div className='pt-[0.9375rem]'>
@@ -48,12 +48,13 @@ const Crew = props => {
         </div>
       </div>
 
-      <div className='relative w-[615px] h-[650px]'>
+      <div className='relative w-[615px] h-[712px]'>
         <Image
           src={crew[selectedPerson]?.images?.webp || '/assets/not_found.png'}
           alt='Person'
           layout='fill'
           objectFit='contain'
+          objectPosition='center bottom'
         />
       </div>
     </>
