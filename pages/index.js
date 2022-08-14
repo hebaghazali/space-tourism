@@ -19,7 +19,7 @@ export default function Home({ destinations, crew, technology }) {
 
   return (
     <>
-      <div className='w-box-width self-end'>
+      <div className='w-box-width'>
         <Heading5>So, you want to travel to</Heading5>
         <Heading1>Space</Heading1>
         <BodyText>

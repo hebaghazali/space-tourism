@@ -12,7 +12,7 @@ const Container = ({ children }) => {
       }`}
     >
       <div
-        className='font-barlow flex justify-around text-white relative pt-[4.75rem]'
+        className='font-barlow flex justify-around items-end text-white relative pt-[4.75rem]'
         style={{ minHeight: 'inherit' }}
       >
         {children}
