@@ -31,7 +31,6 @@ module.exports = {
       },
       spacing: {
         'box-width': '27.75rem',
-        inherit: 'inherit',
       },
       letterSpacing: {
         tight: '2px',
