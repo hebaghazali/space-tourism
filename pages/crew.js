@@ -27,7 +27,7 @@ const Crew = props => {
       </Heading>
 
       <div className='self-end min-w-[38.375rem] pb-[5.875rem] flex flex-col'>
-        <Heading4>{crew[selectedPerson]?.role}</Heading4>
+        <Heading4 className='opacity-50'>{crew[selectedPerson]?.role}</Heading4>
 
         <div className='pt-[0.9375rem]'>
           <Heading3>{crew[selectedPerson]?.name}</Heading3>
